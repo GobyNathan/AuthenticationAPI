@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x, 20.x]  # Include the latest version
+        node-version: [18.x, 20.x]
 
     steps:
     - name: Checkout repository
@@ -31,9 +31,6 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
-
-    - name: Install dependencies
-      run: npm install
 
     - name: Run linter
       run: npm run lint
