@@ -1,4 +1,12 @@
 {
+  "name": "AuthenticationAPI",
+  "version": "1.0.0",
+  "description": "Authentication System using Node.js, Express.js, MongoDB",
+  "main": "/home/loampo/API_NODE/src/index.js",
+  "scripts": {
+    "start": "node /home/loampo/API_NODE/src/index.js",
+    "dev": "nodemon /home/loampo/API_NODE/src/index.js"
+  },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
