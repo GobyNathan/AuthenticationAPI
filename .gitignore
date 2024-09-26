@@ -30,3 +30,5 @@ jspm_packages/
 .fusebox/
 .dynamodb/
 .tern-port
+.vscode-test/
+.txt
