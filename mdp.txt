@@ -1,2 +1,0 @@
-DB.name = TEST
-DB.password = Dilaxson
