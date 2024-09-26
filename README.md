@@ -25,7 +25,11 @@ AuthenticationAPI is a Node.js-based API for handling user authentication. It pr
 
     npm install
 
-3. Create a .env file in the root directory and add the environment variables
+3. Create a .env file in the root of the directory and add the environment variables:
+    ```sh
+    MONGODB_URI=your_mongodb_uri
+    ACCESS_TOKEN_SECRET=your_access_token_secret
+    REFRESH_TOKEN_SECRET=your_refresh_token_secret
 
 4. Start the server:
 
