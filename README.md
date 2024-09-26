@@ -38,25 +38,25 @@ API Endpoints:
 
 1) Register a new user
 
-- URL: /api/register
-- Method: POST
-- Body:
-    {
-        "email": "user@example.com",
-        "password": "yourpassword"
-    }
+    - URL: /api/register
+    - Method: POST
+    - Body:
+        {
+            "email": "user@example.com",
+            "password": "yourpassword"
+        }
 
 2) Login as a user
 
-- URL: /api/login
-- Method: POST
-- Body:
-    {
-        "email": "user@example.com",
-        "password": "yourpassword"
-    }
+    - URL: /api/login
+    - Method: POST
+    - Body:
+        {
+            "email": "user@example.com",
+            "password": "yourpassword"
+        }
 
 3) List of users
 
-- URL: /api/users
-- Method: GET
+    - URL: /api/users
+    - Method: GET
