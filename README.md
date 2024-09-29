@@ -33,7 +33,9 @@ AuthenticationAPI is a Node.js-based API for handling user authentication. It pr
 
 4. Start the server:
 
-    npm start
+    npm start or npm dev
+
+5. Navigate to http://localhost:5000/
     
 
 USAGE
@@ -42,7 +44,7 @@ API Endpoints:
 
 1) Register a new user
 
-    - URL: /api/register
+    - URL: /register
     - Method: POST
     - Body:
         {
@@ -52,7 +54,7 @@ API Endpoints:
 
 2) Login as a user
 
-    - URL: /api/login
+    - URL: /login
     - Method: POST
     - Body:
         {
@@ -62,5 +64,9 @@ API Endpoints:
 
 3) List of users
 
-    - URL: /api/users
+    - URL: /users
     - Method: GET
+    - Body: 
+        {
+            "email": "user@example.com"
+        }
