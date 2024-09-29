@@ -20,7 +20,6 @@ router.get("/register", (req, res) => {
     res.render("./register");
 });
 
-// Register User Logic
 router.post("/register", async (req, res) => {
     try {
         const { Email, password } = req.body;
@@ -47,7 +46,6 @@ router.post("/register", async (req, res) => {
     }
 });
 
-// User Login Logic
 router.post("/login", async (req, res) => {
     try {
         const { Email, password } = req.body;
@@ -69,7 +67,6 @@ router.post("/login", async (req, res) => {
     }
 });
 
-// Token Refresh Logic
 router.post('/token', (req, res) => {
     const refreshToken = req.body.token;
     if (refreshToken == null) {
@@ -85,11 +82,9 @@ router.post('/token', (req, res) => {
             console.error('Error verifying token:', err);
             return res.sendStatus(403);
         }
-        // Generate new token logic here
     });
 });
 
-// Protected route to get users
 router.get('/users', authenticateToken, async (req, res) => {
     try {
         const emailList = await findAllEmails();
@@ -106,14 +101,11 @@ router.get("/logout", authenticateToken, async (req, res) => {
         const token = cookies.jwt;
 
         if (token) {
-            // Remove the token from the array refreshTokens
             refreshTokens = refreshTokens.filter(t => t !== token);
         }
-        // Set the cookie with an expired date to remove it from the client
         res.cookie('jwt', '', { expires: new Date(0) });
         res.redirect('/');
     } catch (error) {
-        console.error('Error logging out:', error); // Log the error
         res.status(500).send('Error logging out');
     }
 });

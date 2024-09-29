@@ -1,8 +1,7 @@
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
-// Definisci o importa refreshTokens
-const refreshTokens = []; // O importa da un altro file
+const refreshTokens = [];
 
 function parseCookies(req) {
   const list = {};
@@ -28,18 +27,17 @@ function authenticateToken(req, res, next) {
   const token = cookies.jwt;
 
   if (!token) {
-    return res.sendStatus(401); // Unauthorized
+    return res.sendStatus(401);
   }
 
-  // Verifica se il token è stato revocato
   if (refreshTokens.includes(token)) {
-    return res.sendStatus(403); // Forbidden
+    return res.sendStatus(403);
   }
 
   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
     if (err) {
       res.cookie('jwt', '', { expires: new Date(0) });
-      return res.sendStatus(403); // Forbidden
+      return res.sendStatus(403);
     }
     req.user = user;
     next();
