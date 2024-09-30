@@ -41,7 +41,7 @@ AuthenticationAPI is a Node.js-based API for handling user authentication. It pr
 
 ## Install on Windows
 ### Steps
-1. Download Windows installation on [releases](https://github.com/GobyNathan/AuthenticationAPI/releases/tag/Release) and open it.
+1. Download Windows installation on [releases](https://github.com/GobyNathan/AuthenticationAPI/releases) and open it.
 
 2. Insert your MongoDB URI while is prompted on your terminal
 
