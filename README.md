@@ -30,7 +30,7 @@ AuthenticationAPI is a Node.js-based API for handling user authentication. It pr
     ```sh
     ./generateENV.sh
     ```
-    Note: Insert your MongoDB URL while is prompted on your terminal.
+    Note: Insert your MongoDB URI while is prompted on your terminal.
 
 4. Start the server:
     ```sh
@@ -43,7 +43,7 @@ AuthenticationAPI is a Node.js-based API for handling user authentication. It pr
 ### Steps
 1. Download Windows installation on [releases](https://github.com/GobyNathan/AuthenticationAPI/releases/tag/Release) and open it.
 
-2. Insert your MongoDB URL while is prompted on your terminal
+2. Insert your MongoDB URI while is prompted on your terminal
 
 3. Open the folder created and open "start in windows"
 
