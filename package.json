@@ -2,7 +2,7 @@
   "name": "authentication-api",
   "version": "1.0.0",
   "description": "Authentication System using Node.js, Express.js, MongoDB",
-  "main": "/home/loampo/API_NODE/src/index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
